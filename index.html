@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conversión de Monedas</title>
+</head>
+
+<body>
+    <h1>Conversión de Monedas</h1>
+    <form id="conversion-form">
+        <label for="from-currency">Moneda de Origen:</label>
+        <select id="from-currency">
+        </select>
+
+        <label for="to-currency">Moneda de Destino:</label>
+        <select id="to-currency">
+        </select>
+
+        <label for="amount">Cantidad:</label>
+        <input type="number" id="amount">
+
+        <button type="submit">Convertir</button>
+    </form>
+    <div id="result-container"></div>
+
+    <h2>Tasas de Conversión</h2>
+    <select id="table-fromCurrency">
+    </select>
+    <table id="conversionTable">
+      </table>
+      <form id="addCurrency"><select id="selectCurrency"></select>
+    <button type="submit">Agregar</button></form>
+    <script src="conversion.js"></script>
+</body>
+
+</html>
