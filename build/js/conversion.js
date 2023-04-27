@@ -4,7 +4,7 @@ const conversionTable = document.getElementById('conversion-table');
 
 // API URL
 const apiUrl = 'https://api.apilayer.com/currency_data/convert';
-const apiKey = '04BM0veqT1ZgO5vVthoLh2eQ2GlYjz9o';
+const apiKey = 'uVSLuxDMVCLXuf9hlWRGqWxJ2B5Qw91L';
 const requestOptions = {
   method: 'GET',
   redirect: 'follow',
