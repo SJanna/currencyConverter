@@ -12,3 +12,5 @@ node_modules
 
 # Ignorar archivos de configuración SASS
 .sass-cache
+
+/node_modules

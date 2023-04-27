@@ -4,33 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <title>Conversión de Monedas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
-<body>
-    <h1>Conversión de Monedas</h1>
-    <form id="conversion-form">
-        <label for="from-currency">Moneda de Origen:</label>
-        <select id="from-currency">
-        </select>
+<body class="bg-gray-200">
+    <div class="container mx-auto py-10">
+        <h1 class="text-4xl font-bold mb-10 text-center">Conversión de Monedas</h1>
+        <form id="conversion-form" class="flex flex-wrap gap-4 justify-center items-center">
+            <div class="flex flex-col">
+                <label for="from-currency" class="text-lg font-medium content-center">Moneda de Origen:</label>
+                <select id="from-currency"
+                    class="mt-2 rounded-md shadow-sm border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:ring-opacity-50">
+                </select>
+            </div>
 
-        <label for="to-currency">Moneda de Destino:</label>
-        <select id="to-currency">
-        </select>
+            <div class="flex flex-col">
+                <label for="to-currency" class="text-lg font-medium">Moneda de Destino:</label>
+                <select id="to-currency"
+                    class="mt-2 rounded-md shadow-sm border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:ring-opacity-50">
+                </select>
+            </div>
 
-        <label for="amount">Cantidad:</label>
-        <input type="number" id="amount">
+            <div class="flex flex-col">
+                <label for="amount" class="text-lg font-medium">Cantidad:</label>
+                <input type="number" id="amount"
+                    class="mt-2 rounded-md shadow-sm border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:ring-opacity-50">
+            </div>
 
-        <button type="submit">Convertir</button>
-    </form>
-    <div id="result-container"></div>
+            <button type="submit"
+                class="mt-4 px-4 py-2 text-lg font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Convertir</button>
+        </form>
+        <div class="grid grid-cols-6 gap-4">
+            <div id="result-container" class="col-start-2 col-span-4 font-bold mt-10 px-4 text-lg rounded-lg text-center bg-white">
+            </div>
+        </div>
 
-    <h2>Tasas de Conversión</h2>
-    <select id="table-fromCurrency">
-    </select>
-    <table id="conversionTable">
-      </table>
-      <form id="addCurrency"><select id="selectCurrency"></select>
-    <button type="submit">Agregar</button></form>
+    </div>
+
+    <div class="container mx-auto py-10">
+        <h2 class="text-3xl font-bold mt-10 text-center">Tasas de Conversión</h2>
+        <div class="flex flex-col ">
+            <label for="table-fromCurrency" class="text-lg font-medium content-center">Moneda:</label>
+            <select id="table-fromCurrency"
+                class="mt-2 rounded-md shadow-sm border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:ring-opacity-50">
+            </select>
+        </div>
+        <div class="relative rounded-xl overflow-auto">
+            <div class="shadow-sm overflow-hidden my-8 mx-auto">
+                <table id="conversionTable" class="border-collapse table-auto w-full text-sm">
+                </table>
+            </div>
+        </div>
+        <form id="addCurrency" class="flex flex-wrap gap-4 justify-center items-center mt-5">
+            <div class="flex flex-col">
+                <label for="selectCurrency" class="text-lg font-medium">Agregar moneda:</label>
+                <select id="selectCurrency"
+                    class="mt-2 rounded-md shadow-sm border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:ring-opacity-50">
+                </select>
+            </div>
+
+            <button type="submit"
+                class="mt-4 px-4 py-2 text-lg font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Agregar</button>
+                <button id="eliminarCurrencies" type="button"
+                class="mt-4 px-4 py-2 text-lg font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Resetear
+            </button>
+            </form>
+       
+    </div>
+    <hr>
+    </hr>
+    <hr>
+    </hr>
+    <hr>
+    </hr>
+    <div class="bg-white flex flex-col justify-center items-center py-10">
+        <div class="shadow-sm overflow-hidden my-8 mx-auto">
+            <table id="registro" class="border-collapse table-auto w-full text-sm">
+
+            </table>
+        </div>
+        <button id="eliminarRegistro" type="button"
+            class="mt-4 px-4 py-2 text-lg font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Eliminar
+            Historial
+        </button>
+    </div>
+
     <script src="conversion.js"></script>
 </body>
 
