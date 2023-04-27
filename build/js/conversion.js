@@ -4,7 +4,7 @@ const conversionTable = document.getElementById('conversion-table');
 
 // API URL
 const apiUrl = 'https://api.apilayer.com/currency_data/convert';
-const apiKey = 'VaZO7TkXB143lgJUrogj9kRcNzFzZo4e';
+const apiKey = '04BM0veqT1ZgO5vVthoLh2eQ2GlYjz9o';
 const requestOptions = {
   method: 'GET',
   redirect: 'follow',
@@ -50,13 +50,13 @@ let currenciesStorage = JSON.parse(localStorage.getItem('currencies')) || ['USD'
 
 addCurrencyForm.addEventListener('submit', (event) => {
   event.preventDefault();
-
+//GIX
   const selectedValue = selectCurrency.value;
-  currenciesStorage.push(selectedValue);
-  localStorage.setItem('currencies', JSON.stringify(currenciesStorage));
   if (!currenciesStorage.includes(selectedValue)) {
     currenciesStorage.push(selectedValue);
   }
+  localStorage.setItem('currencies', JSON.stringify(currenciesStorage));
+  console.log(selectedValue, currenciesStorage);
 });
 
 //Función para crear y actualizar la tabla
